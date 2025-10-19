@@ -6,31 +6,71 @@
 body{
     background-color: #F8F8F8;
 }
-.link{
-    margin-top: 10px;
-    text-align: center;
-    border: 2px solid black;
-    background-color: #FF7043;
-    width: 100px;
-    height: auto;
+.main-header {
+    /* Đặt ảnh từ file của bạn làm nền */
+    background-image: url(nền.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover; /* Đảm bảo ảnh che phủ hết chiều rộng */
+    background-position: center top; /* Căn giữa ảnh theo chiều ngang */
+    
+    /* Thiết lập chiều cao tổng thể của header (tùy thuộc vào kích thước ảnh) */
+    height: 300px; /* Điều chỉnh con số này */
+    
+    /* Cần thiết lập để định vị các phần tử con */
+    position: relative; 
 }
-#link{
-    height: 40px;
-    background-color: #1A237E;
-    display: grid;
-    justify-content: space-around;
-    align-content: center;
-    grid-template-columns: repeat(3,auto);
+.nav-bar {
+    /* Đặt ở vị trí tuyệt đối (absolute) để nó nằm đè lên ảnh nền */
+    position: absolute; 
+    bottom: 40px; /* Đẩy thanh menu lên trên tiêu đề phụ */
+    left: 0;
+    width: 100%;
+    
+    /* Kiểu dáng thanh menu */
+    background-color: #1A237E; /* Màu xám */
+    height: 30px; /* Chiều cao thanh menu */
+    
+    /* Dùng Flexbox để căn giữa các nút */
+    display: flex;
+    justify-content: center; /* Căn giữa các nút theo chiều ngang */
+    align-items: center; 
 }
-a{
-    color: #89503e;
+.nav-button {
+    /* Bỏ gạch chân mặc định của link */
+    text-decoration: none; 
+    
+    /* Tạo khoảng cách xung quanh chữ */
+    padding: 3px 15px; 
+    
+    /* Màu chữ và màu nền nút */
+    color: #333;
+    background-color: #e0e0e0; /* Màu nền nút */
+    
+    /* Tạo khoảng cách giữa các nút */
+    margin: 0 50px; /* Điều chỉnh khoảng cách này */
+    
+    /* Định dạng chữ */
+    font-family: sans-serif;
+    font-size: 14px;
 }
-p{
-    color: #333333;
+
+/* Hiệu ứng rê chuột (Tùy chọn) */
+.nav-button:hover {
+    background-color: #c0c0c0; 
 }
-.title{
-    height: 75px;
-    background-color: #1A237E;
+.sub-title {
+    /* Đặt ở vị trí tuyệt đối */
+    position: absolute;
+    bottom: 5px; /* Đẩy tiêu đề lên 5px so với đáy header */
+    left: 50%;
+    transform: translateX(-50%); /* Kỹ thuật căn giữa chính xác */
+    
+    /* Định dạng chữ */
+    color: #4b0082; /* Màu tím đậm */
+    font-family: 'Georgia', serif; /* Thay bằng font chữ nghệ thuật */
+    font-size: 24px; 
+    font-style: italic;
+    font-weight: normal;
 }
 #content{
     border: 5px;
